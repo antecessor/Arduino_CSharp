@@ -1,0 +1,127 @@
+﻿<Window x:Class="ArduinoWPFProj.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525"  Foreground="White" WindowStyle="None" WindowStartupLocation="CenterScreen" MinWidth="640" MinHeight="480" ResizeMode="NoResize" Name="Main">
+    <Grid>
+
+        <Border BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Left" Height="480" VerticalAlignment="Top" Width="640"/>
+        <Canvas Height="20" Width="Auto" Margin="10,0,10,105" VerticalAlignment="Bottom" Background="#FF4E4E4E" Name="zoomBar"  >
+            <Rectangle Fill="WhiteSmoke" Width="20" Height="20" VerticalAlignment="Stretch" Canvas.Left="0" Name="inPoint"  />
+            <Rectangle Fill="WhiteSmoke" Width="20" Height="20" VerticalAlignment="Stretch" Canvas.Left="738" Name="outPoint" />
+            <Rectangle Fill="CadetBlue" Width="106" Height="20" VerticalAlignment="Top" HorizontalAlignment="Stretch" Name="zoomBar_Bar" Initialized="zoomBar_Bar_Initialized" Canvas.Left="14" Canvas.Right="100" Panel.ZIndex="-1"  ClipToBounds="True" />
+        </Canvas>
+
+
+        <StackPanel Height="58" HorizontalAlignment="Left" Margin="10,0,0,407" Name="signalToggles" VerticalAlignment="Bottom" Width="176"></StackPanel>
+
+
+        <Button Content="X" Height="20" HorizontalAlignment="Right" Margin="0,5,12,0" Name="windowClose" VerticalAlignment="Top" Width="20" FontWeight="Bold" Background="WhiteSmoke" Click="CloseWindow" />
+        <Button Content="-" Height="20" HorizontalAlignment="Right" Margin="0,5,40,0" Name="windowMin" VerticalAlignment="Top" Width="20" FontWeight="Bold" Background="WhiteSmoke" Click="MinWindow" />
+        <Rectangle Margin="0,0,0,0" Height="15" HorizontalAlignment="Stretch" VerticalAlignment="Top" IsManipulationEnabled="True" Fill="#84D4D4D4" Name="dragBar" MouseLeftButtonDown="DragWindow" StrokeThickness="0" Panel.ZIndex="-10"></Rectangle>
+        <Grid Height="73" VerticalAlignment="Top" Margin="0,18,0,0" IsHitTestVisible="True">
+            <Button Content="شروع" Height="40" HorizontalAlignment="Right" Margin="0,12,12,0" Name="connectButton" VerticalAlignment="Top" Width="100" Padding="5" BorderThickness="0" BorderBrush="#00000000" FontStyle="Normal" FontWeight="Normal" FontSize="16" Click="ArduinoConnect" Foreground="#FF212121">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFF0F0F0" Offset="0" />
+                        <GradientStop Color="#FFDFDFDF" Offset="1" />
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <ComboBox  Height="23" HorizontalAlignment="Right" Margin="0,29,118,0" Name="comportList" VerticalAlignment="Top" Width="120" Text="Port" SelectionChanged="ChangePort" BorderBrush="{x:Null}" />
+            <Label Content="پورت های موجود" Height="28" HorizontalAlignment="Right" Margin="0,5,127,0" Name="comportLabel" VerticalAlignment="Top" Width="103" />
+            <Button Height="23" HorizontalAlignment="Right" Margin="0,30,250,0" Name="refreshPortsBtn" VerticalAlignment="Top" Width="30" BorderBrush="{x:Null}" OpacityMask="{x:Null}" Foreground="{x:Null}" Click="RefreshPorts" Background="{x:Null}" ToolTip="Refresh COM port list" IsEnabled="True">
+                <Button.Content>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="Images/reload.png" Width="16" Height="16" Stretch="None" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </StackPanel>
+                </Button.Content>
+            </Button>
+            <Button Height="23" HorizontalAlignment="Right" Margin="0,7,250,0" Name="helpBtn" VerticalAlignment="Top" Width="30" BorderBrush="{x:Null}" OpacityMask="{x:Null}" Foreground="#FF383838" Click="MoreHelp" Background="{x:Null}" ToolTip="More Help" FontSize="12" FontWeight="Bold" Content="?" />
+            <Label Content="آستانه تشخیص" HorizontalAlignment="Left" Margin="249,7,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.512,0.538"/>
+
+        </Grid>
+        <Viewbox Name="canvasviewbox" Stretch="Fill" ClipToBounds="True" Margin="10,90,10,130">
+            <Canvas  Name="bgplot"  Height="300"  Width="600" HorizontalAlignment="Left" VerticalAlignment="Top" Background="#FF4E4E4E"   Cursor="Cross" MouseLeave="disableDraw" ClipToBounds="True">
+                <Canvas Name="plot" Height="300"  Width="600" HorizontalAlignment="Center" VerticalAlignment="Center">
+                </Canvas>
+                <Rectangle Fill="#FFF4F4F5" Height="300" Canvas.Left="500" Stroke="Black" Width="100"/>
+                <Label Content="راست :" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="500" Canvas.Top="8"/>
+                <Label Content="چپ :" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="501" Canvas.Top="40"/>
+                <Label Content="وسط :" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="500" Canvas.Top="74"/>
+                <Label Content="نادرست :" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="500" Canvas.Top="104"/>
+
+                <Label Name="rightlbl" Content="" Canvas.Left="552" Canvas.Top="8"/>
+                <Label Name="leftlbl" Content="" Canvas.Left="552" Canvas.Top="43"/>
+                <Label Name="centerlbl" Content="" Canvas.Left="552" Canvas.Top="74"/>
+                <Label Name="falselbl" Content="" Canvas.Left="552" Canvas.Top="104"/>
+                
+
+
+            </Canvas>
+        </Viewbox>
+
+
+        <Grid Name="Viewcontrols" Margin="0,0,10,10" ShowGridLines="False" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="88" Width="620">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="135" />
+                <ColumnDefinition Width="183" />
+                <ColumnDefinition Width="209" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Button Content="تایید تنظیمات" Height="28" HorizontalAlignment="Right" Name="settingbtn" VerticalAlignment="Top" Width="75" Grid.Column="3" BorderBrush="#00000000" Foreground="#FF212121"  Padding="0" Click="Setset" ToolTip="شروع" />
+            <Button Height="40" HorizontalAlignment="Right" Margin="0,34,0,0" Name="ExportBtn" OpacityMask="{x:Null}" ToolTip="Export data" VerticalAlignment="Top" Width="75" Grid.Column="3" Background="{Binding ElementName=connectButton, Path=Background}" Foreground="#00000000" Click="ExportData" BorderBrush="{x:Null}" IsEnabled="False">
+                <Button.Content>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Image Height="43" HorizontalAlignment="Center" Source="Images/save.png" Stretch="None" VerticalAlignment="Center" Width="75" Name="floppy" />
+                    </StackPanel>
+                </Button.Content>
+            </Button>
+            <Label Content="نام و نام خانوادگی" Grid.Column="2" HorizontalAlignment="Left" Margin="95,-7,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.467,1.246" Width="114"/>
+            <Label Content="سن" Grid.Column="2" HorizontalAlignment="Left" Margin="144,35,0,0" VerticalAlignment="Top" RenderTransformOrigin="3.716,0.189"/>
+            <Label Content="وزن" Grid.Column="2" HorizontalAlignment="Left" Margin="27,-9,0,0" VerticalAlignment="Top" RenderTransformOrigin="3.716,0.189"/>
+            <Label Content="قد" Grid.Column="2" HorizontalAlignment="Left" Margin="28,35,0,0" VerticalAlignment="Top" RenderTransformOrigin="3.716,0.189"/>
+            <TextBox Name="Name" Text="" Grid.Column="2" HorizontalAlignment="Left" Height="23" Margin="85,18,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="118"/>
+            <TextBox Name="weight" Text=""  Grid.Column="2" HorizontalAlignment="Left" Height="23" Margin="10,18,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="60"/>
+            <TextBox  Name="tall" Text="" Grid.Column="2" HorizontalAlignment="Left" Height="23" Margin="10,58,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="60"/>
+            <TextBox  Name="age" Text="" Grid.Column="2" HorizontalAlignment="Left" Height="23" Margin="116,58,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="83"/>
+
+            <Rectangle RadiusX="10" RadiusY="10" Fill="#84D4D4D4" StrokeThickness="0" Margin="173,-7,0,-7" Grid.Column="1"/>
+            <Rectangle RadiusX="10" RadiusY="10" Fill="#84D4D4D4" StrokeThickness="0" Margin="130,-7,178,-7" Grid.ColumnSpan="2"/>
+            <Label Content="تعداد ضربات" Grid.Column="1" HorizontalAlignment="Left" Margin="92,-5,0,0" VerticalAlignment="Top" RenderTransformOrigin="3.716,0.189"/>
+            <Label Content="تاخیر" Grid.Column="1" HorizontalAlignment="Left" Margin="23,-5,0,0" VerticalAlignment="Top" RenderTransformOrigin="3.716,0.189"/>
+            <Border BorderBrush="Black" BorderThickness="0.51" Grid.Column="1" HorizontalAlignment="Left" Height="88" Margin="87,0,0,0" VerticalAlignment="Top" Width="81">
+                <StackPanel Margin="13,0,0,0">
+                    <RadioButton Name="Rad1" GroupName="zarbe" Content="10" Margin="9,20,2,5"  IsChecked="True"/>
+                    <RadioButton Name="Rad2" GroupName="zarbe" Content="20" Margin="9,2,15,1"/>
+                    <RadioButton  Name="Rad3" GroupName="zarbe" Content="30" Margin="9,8,14,5"/>
+
+                </StackPanel>
+            </Border>
+            <Border BorderBrush="Black" BorderThickness="0.51" Grid.Column="1" HorizontalAlignment="Left" Height="88" Margin="7,0,0,0" VerticalAlignment="Top" Width="81">
+                <StackPanel Margin="13,0,0,0">
+                    <RadioButton Name="Radt1" GroupName="takhir" Content="1(S)" Margin="9,20,14,5"  IsChecked="True"/>
+                    <RadioButton Name="Radt2" GroupName="takhir" Content="2(S)" Margin="9,2,16,1"/>
+                    <RadioButton Name="Radt3" GroupName="takhir" Content="3(S)" Margin="9,8,14,5"/>
+
+                </StackPanel>
+            </Border>
+            <Border BorderBrush="Black" BorderThickness="0.51" Grid.Column="0" HorizontalAlignment="Left" Height="100" Margin="-9,-5,0,-7" VerticalAlignment="Top" Width="134">
+                <StackPanel Margin="13,-23,-25,0">
+                    <RadioButton Name="RadL" GroupName="DIR" Content="بیشتر چپ" Margin="9,25,14,5"  IsChecked="True"/>
+                    <RadioButton Name="RadR" GroupName="DIR" Content="بیشتر راست" Margin="9,2,16,1"/>
+                    <RadioButton Name="RadM" GroupName="DIR" Content="بیشتر وسط" Margin="9,9,16,2"/>
+                    <RadioButton Name="RadN" GroupName="DIR" Content="عادی"  Margin="10,9,16,7"/>
+
+                </StackPanel>
+            </Border>
+
+
+
+        </Grid>
+        <Rectangle Fill="#FFE3E3E3" HorizontalAlignment="Left" Height="13" Margin="-3,78,0,0" StrokeThickness="0" VerticalAlignment="Top" Width="643"/>
+        <TextBox Name="threshtxt" HorizontalAlignment="Left" Height="23" Margin="230,50,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.492,0.435"/>
+
+
+    </Grid>
+</Window>

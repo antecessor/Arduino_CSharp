@@ -1,0 +1,34 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:oxy="http://oxyplot.org/wpf"
+
+        xmlns:chartingToolkit="clr-namespace:System.Windows.Controls.DataVisualization.Charting;assembly=System.Windows.Controls.DataVisualization.Toolkit" x:Class="ArduinoWPFProj.PLOT"
+
+        Title="PLOT" Height="737" Width="1200" WindowStartupLocation="CenterScreen" WindowStyle="None">
+
+
+    <Grid>
+
+        <chartingToolkit:Chart HorizontalAlignment="Left"  Height="239" Margin="21,0,0,0" VerticalAlignment="Top" Width="1161">
+
+            <chartingToolkit:ColumnSeries Name="cchar1" DependentValuePath="Value" IndependentValuePath="Key" Title="اندازه ضربه "  ItemsSource="{Binding}" IsSelectionEnabled="True" Margin="0,0,2,0"/>
+
+        </chartingToolkit:Chart>
+        <chartingToolkit:Chart HorizontalAlignment="Left"  Height="242" Margin="21,244,0,0" VerticalAlignment="Top" Width="1161">
+
+            <chartingToolkit:ColumnSeries Name="cchar2" DependentValuePath="Value" IndependentValuePath="Key" Title="اندازه ضربه "  ItemsSource="{Binding}" IsSelectionEnabled="True" Margin="0,0,2,0"/>
+
+        </chartingToolkit:Chart>
+        <chartingToolkit:Chart HorizontalAlignment="Left"  Height="205" Margin="21,491,0,0" VerticalAlignment="Top" Width="1161">
+
+            <chartingToolkit:ColumnSeries Name="cchar3" DependentValuePath="Value" IndependentValuePath="Key" Title="صحت ضربه ها "  ItemsSource="{Binding}" IsSelectionEnabled="True" Margin="0,0,2,-62" Height="161" VerticalAlignment="Top"/>
+
+        </chartingToolkit:Chart>
+        <Button Content="شروع یک تست جدید" HorizontalAlignment="Left" Margin="575,701,0,0" VerticalAlignment="Top" Width="181" Height="28" Click="exit"/>
+        <Label Content=":میانگین زمانی عکس العمل"  FlowDirection="RightToLeft" HorizontalAlignment="Left" Margin="87,10,0,0" VerticalAlignment="Top"/>
+        <Label Content="" Name="meanamallbl" HorizontalAlignment="Left" Margin="232,10,0,0" VerticalAlignment="Top"/>
+        <Button Content="پرینت اطلاعات" Click="Printbtn" HorizontalAlignment="Left" Margin="562,10,0,0" VerticalAlignment="Top" Width="127"/>
+
+
+    </Grid>
+</Window>

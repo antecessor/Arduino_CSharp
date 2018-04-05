@@ -1,0 +1,62 @@
+C:\Users\Mohebian\Desktop\ArduinoC#\ArduinoWPFProj\ArduinoWPFProj\bin\Debug\ArduinoWPFProj.exe.config
+C:\Users\Mohebian\Desktop\ArduinoC#\ArduinoWPFProj\ArduinoWPFProj\obj\Debug\MainWindow.baml
+C:\Users\Mohebian\Desktop\ArduinoC#\ArduinoWPFProj\ArduinoWPFProj\obj\Debug\MainWindow.g.cs
+C:\Users\Mohebian\Desktop\ArduinoC#\ArduinoWPFProj\ArduinoWPFProj\obj\Debug\App.g.cs
+C:\Users\Mohebian\Desktop\ArduinoC#\ArduinoWPFProj\ArduinoWPFProj\obj\Debug\ArduinoWPFProj_MarkupCompile.cache
+C:\Users\Mohebian\Desktop\ArduinoC#\ArduinoWPFProj\ArduinoWPFProj\obj\Debug\ArduinoWPFProj.g.resources
+C:\Users\Mohebian\Desktop\ArduinoC#\ArduinoWPFProj\ArduinoWPFProj\obj\Debug\ArduinoWPFProj.Properties.Resources.resources
+C:\Users\Mohebian\Desktop\ArduinoC#\ArduinoWPFProj\ArduinoWPFProj\obj\Debug\ArduinoWPFProj.csproj.GenerateResource.Cache
+C:\Users\Mohebian\Desktop\ArduinoC#\ArduinoWPFProj\ArduinoWPFProj\obj\Debug\helpDialogBox.baml
+C:\Users\Mohebian\Desktop\ArduinoC#\ArduinoWPFProj\ArduinoWPFProj\obj\Debug\helpDialogBox.g.cs
+C:\Users\Mohebian\Desktop\ArduinoC#\ArduinoWPFProj\ArduinoWPFProj\bin\Debug\ArduinoWPFProj.exe
+C:\Users\Mohebian\Desktop\ArduinoC#\ArduinoWPFProj\ArduinoWPFProj\bin\Debug\ArduinoWPFProj.pdb
+C:\Users\Mohebian\Desktop\ArduinoC#\ArduinoWPFProj\ArduinoWPFProj\obj\Debug\ArduinoWPFProj.exe
+C:\Users\Mohebian\Desktop\ArduinoC#\ArduinoWPFProj\ArduinoWPFProj\obj\Debug\ArduinoWPFProj.pdb
+C:\Users\Mohebian\Desktop\ArduinoC#\ArduinoWPFProj\ArduinoWPFProj\obj\Debug\ArduinoWPFProj.csprojResolveAssemblyReference.cache
+C:\Users\Mohebian\Desktop\ArduinoC#\ArduinoWPFProj\ArduinoWPFProj\obj\Debug\PLOT.g.cs
+C:\Users\Mohebian\Desktop\ArduinoC#\ArduinoWPFProj\ArduinoWPFProj\bin\Debug\OxyPlot.dll
+C:\Users\Mohebian\Desktop\ArduinoC#\ArduinoWPFProj\ArduinoWPFProj\bin\Debug\OxyPlot.WindowsForms.dll
+C:\Users\Mohebian\Desktop\ArduinoC#\ArduinoWPFProj\ArduinoWPFProj\bin\Debug\OxyPlot.Wpf.dll
+C:\Users\Mohebian\Desktop\ArduinoC#\ArduinoWPFProj\ArduinoWPFProj\bin\Debug\OxyPlot.Xps.dll
+C:\Users\Mohebian\Desktop\ArduinoC#\ArduinoWPFProj\ArduinoWPFProj\bin\Debug\OxyPlot.pdb
+C:\Users\Mohebian\Desktop\ArduinoC#\ArduinoWPFProj\ArduinoWPFProj\bin\Debug\OxyPlot.xml
+C:\Users\Mohebian\Desktop\ArduinoC#\ArduinoWPFProj\ArduinoWPFProj\bin\Debug\OxyPlot.WindowsForms.pdb
+C:\Users\Mohebian\Desktop\ArduinoC#\ArduinoWPFProj\ArduinoWPFProj\bin\Debug\OxyPlot.WindowsForms.xml
+C:\Users\Mohebian\Desktop\ArduinoC#\ArduinoWPFProj\ArduinoWPFProj\bin\Debug\OxyPlot.Wpf.pdb
+C:\Users\Mohebian\Desktop\ArduinoC#\ArduinoWPFProj\ArduinoWPFProj\bin\Debug\OxyPlot.Wpf.xml
+C:\Users\Mohebian\Desktop\ArduinoC#\ArduinoWPFProj\ArduinoWPFProj\bin\Debug\OxyPlot.Xps.pdb
+C:\Users\Mohebian\Desktop\ArduinoC#\ArduinoWPFProj\ArduinoWPFProj\bin\Debug\OxyPlot.Xps.xml
+C:\Users\Mohebian\Desktop\ArduinoC#\ArduinoWPFProj\ArduinoWPFProj\obj\Debug\PLOT.baml
+C:\Users\Mohebian\Desktop\ArduinoC#\ArduinoWPFProj\ArduinoWPFProj\bin\Debug\system.windows.controls.datavisualization.toolkit.dll
+C:\Users\Mohebian\Desktop\ArduinoC#\ArduinoWPFProj\ArduinoWPFProj\bin\Debug\wpftoolkit.dll
+D:\Project\arduino C#\ArduinoC#\ArduinoWPFProj\ArduinoWPFProj\bin\Debug\ArduinoWPFProj.exe.config
+D:\Project\arduino C#\ArduinoC#\ArduinoWPFProj\ArduinoWPFProj\obj\Debug\ArduinoWPFProj.exe
+D:\Project\arduino C#\ArduinoC#\ArduinoWPFProj\ArduinoWPFProj\obj\Debug\ArduinoWPFProj.pdb
+D:\Project\arduino C#\ArduinoC#\ArduinoWPFProj\ArduinoWPFProj\bin\Debug\ArduinoWPFProj.exe
+D:\Project\arduino C#\ArduinoC#\ArduinoWPFProj\ArduinoWPFProj\bin\Debug\ArduinoWPFProj.pdb
+D:\Project\arduino C#\ArduinoC#\ArduinoWPFProj\ArduinoWPFProj\bin\Debug\OxyPlot.dll
+D:\Project\arduino C#\ArduinoC#\ArduinoWPFProj\ArduinoWPFProj\bin\Debug\OxyPlot.WindowsForms.dll
+D:\Project\arduino C#\ArduinoC#\ArduinoWPFProj\ArduinoWPFProj\bin\Debug\OxyPlot.Wpf.dll
+D:\Project\arduino C#\ArduinoC#\ArduinoWPFProj\ArduinoWPFProj\bin\Debug\OxyPlot.Xps.dll
+D:\Project\arduino C#\ArduinoC#\ArduinoWPFProj\ArduinoWPFProj\bin\Debug\system.windows.controls.datavisualization.toolkit.dll
+D:\Project\arduino C#\ArduinoC#\ArduinoWPFProj\ArduinoWPFProj\bin\Debug\wpftoolkit.dll
+D:\Project\arduino C#\ArduinoC#\ArduinoWPFProj\ArduinoWPFProj\bin\Debug\OxyPlot.pdb
+D:\Project\arduino C#\ArduinoC#\ArduinoWPFProj\ArduinoWPFProj\bin\Debug\OxyPlot.xml
+D:\Project\arduino C#\ArduinoC#\ArduinoWPFProj\ArduinoWPFProj\bin\Debug\OxyPlot.WindowsForms.pdb
+D:\Project\arduino C#\ArduinoC#\ArduinoWPFProj\ArduinoWPFProj\bin\Debug\OxyPlot.WindowsForms.xml
+D:\Project\arduino C#\ArduinoC#\ArduinoWPFProj\ArduinoWPFProj\bin\Debug\OxyPlot.Wpf.pdb
+D:\Project\arduino C#\ArduinoC#\ArduinoWPFProj\ArduinoWPFProj\bin\Debug\OxyPlot.Wpf.xml
+D:\Project\arduino C#\ArduinoC#\ArduinoWPFProj\ArduinoWPFProj\bin\Debug\OxyPlot.Xps.pdb
+D:\Project\arduino C#\ArduinoC#\ArduinoWPFProj\ArduinoWPFProj\bin\Debug\OxyPlot.Xps.xml
+D:\Project\arduino C#\ArduinoC#\ArduinoWPFProj\ArduinoWPFProj\obj\Debug\ArduinoWPFProj.csprojResolveAssemblyReference.cache
+D:\Project\arduino C#\ArduinoC#\ArduinoWPFProj\ArduinoWPFProj\obj\Debug\helpDialogBox.baml
+D:\Project\arduino C#\ArduinoC#\ArduinoWPFProj\ArduinoWPFProj\obj\Debug\MainWindow.baml
+D:\Project\arduino C#\ArduinoC#\ArduinoWPFProj\ArduinoWPFProj\obj\Debug\PLOT.baml
+D:\Project\arduino C#\ArduinoC#\ArduinoWPFProj\ArduinoWPFProj\obj\Debug\helpDialogBox.g.cs
+D:\Project\arduino C#\ArduinoC#\ArduinoWPFProj\ArduinoWPFProj\obj\Debug\MainWindow.g.cs
+D:\Project\arduino C#\ArduinoC#\ArduinoWPFProj\ArduinoWPFProj\obj\Debug\PLOT.g.cs
+D:\Project\arduino C#\ArduinoC#\ArduinoWPFProj\ArduinoWPFProj\obj\Debug\App.g.cs
+D:\Project\arduino C#\ArduinoC#\ArduinoWPFProj\ArduinoWPFProj\obj\Debug\ArduinoWPFProj_MarkupCompile.cache
+D:\Project\arduino C#\ArduinoC#\ArduinoWPFProj\ArduinoWPFProj\obj\Debug\ArduinoWPFProj.g.resources
+D:\Project\arduino C#\ArduinoC#\ArduinoWPFProj\ArduinoWPFProj\obj\Debug\ArduinoWPFProj.Properties.Resources.resources
+D:\Project\arduino C#\ArduinoC#\ArduinoWPFProj\ArduinoWPFProj\obj\Debug\ArduinoWPFProj.csproj.GenerateResource.Cache
